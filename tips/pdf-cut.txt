@@ -1,0 +1,2 @@
+# Concat pdfs
+pdftk *.pdf cat output out.pdf

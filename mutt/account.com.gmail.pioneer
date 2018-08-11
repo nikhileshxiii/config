@@ -1,0 +1,5 @@
+source "gpg -d ~/.mutt/com.gmail.pioneer.cred.gpg |"
+
+set header_cache = ~/.mutt/com.gmail.pioneer/cache/headers
+set message_cachedir = ~/.mutt/com.gmail.pioneer/cache/bodies
+set certificate_file = ~/.mutt/com.gmail.pioneer/certificates

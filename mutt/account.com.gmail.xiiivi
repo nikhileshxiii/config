@@ -1,0 +1,6 @@
+source "gpg -d ~/.mutt/com.gmail.xiiivi.cred.gpg |"
+
+
+set header_cache = ~/.mutt/com.gmail.xiiivi/cache/headers
+set message_cachedir = ~/.mutt/com.gmail.xiiivi/cache/bodies
+set certificate_file = ~/.mutt/com.gmail.xiiivi/certificates

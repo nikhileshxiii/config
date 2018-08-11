@@ -1,0 +1,2 @@
+# convert app - available in imagemagick - can stitch together multiple files
+convert image.jpg +compress pdffile.pdf

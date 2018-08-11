@@ -1,0 +1,79 @@
+syntax on
+set wrap
+set number
+set relativenumber
+set ruler
+set smarttab
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set tabstop=4
+filetype plugin on
+
+set path+=**
+set wildmenu
+
+" - :b autocomplete to a file
+
+"
+" ^] to jump to tag under cursor
+" g^] ambiguous tags - searches globally
+" ^t jump back to tag stack
+command! MakeTags !ctags -R .
+
+
+" mapping
+"nnoremap <shortcut_here> : read file<CR>u
+": changes mode
+"read loads a file :r
+"<CR> enterkey
+"u commandmode here
+"
+"
+"  "+yy -> copies to system clipboard
+"  v-> copies to system clipboard
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'tpope/vim-rails.git'
+" " vim-scripts repos
+" Bundle 'L9'
+" Bundle 'FuzzyFinder'
+" " non github repos
+" Bundle 'git://git.wincent.com/command-t.git'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'sjl/badwolf'
+Plugin 'junegunn/goyo.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'reedes/vim-colors-pencil'
+
+function! s:goyo_enter()
+    colorscheme pencil
+endfunction
+
+function! s:goyo_leave()
+    colorscheme badwolf
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+
+Plugin 'airblade/vim-gitgutter'
+
+
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+

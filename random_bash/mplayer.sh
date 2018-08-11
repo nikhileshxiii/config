@@ -1,0 +1,3 @@
+# mplayer -af scaletemp file
+
+

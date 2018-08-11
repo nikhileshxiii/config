@@ -1,0 +1,12 @@
+sudo rm -rf ~/.gnugpg
+
+gpg --gen-key
+	
+gpg -r your.email@example.com -e ~/.mutt/passwords
+shred ~/.mutt/passwords
+rm ~/.mutt/passwords
+
+
+source "gpg -d ~/.mutt/passwords.gpg |"
+
+chmod go-r $HOME/.muttrc

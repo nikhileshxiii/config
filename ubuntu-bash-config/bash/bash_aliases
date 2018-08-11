@@ -1,0 +1,51 @@
+alias cda="cd ~/.config/awesome/"
+alias cdi="cd ~/.config/i3/"
+alias cdd="cd;cd"
+alias via="vim ~/.config/awesome/rc.lua"
+alias vii="vim ~/.config/i3/config"
+alias doc="ranger Documents"
+# alias rmv="/etc/profile.d/rvm"
+alias chromium="chromium-browser &"
+alias chrome="google-chrome &"
+
+# npm
+export PATH="$PATH:/home/falcon/.npm-global/bin"
+export NODE_PATH="$NODE_PATH:/home/falcon/.npm-global/lib/node_modules"
+
+# Yarn
+export PATH="$PATH:`yarn global bin`"
+
+alias tmux="tmux -2u"
+
+alias eclipse="~/eclipse/eclipse"
+alias idea="~/intelliJ/bin/idea.sh"
+alias pycharm="/home/falcon/pycharm/bin/pycharm.sh"
+# export SPARK_HOME="/home/falcon/spark"
+export GOPATH=$HOME/code/golang
+alias vii="vim ~/.config/i3/config"
+alias em='emacs'
+alias mplayer='mplayer -af scaletempo'
+alias updt='sudo apt update && sudo apt list --upgradable'
+alias upgrd='sudo apt upgrade -y'
+alias install='sudo apt install $@ -y'
+alias remove='sudo apt remove $@ -y'
+alias autoremove='sudo apt autoremove' 
+
+export EDITOR="vim"
+# export TERMINAL="gnome-terminal"
+# export BROWSER="firefox"
+
+# export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$GOPATH
+export PATH=$PATH:$GOPATH:$SPARK_HOME/bin
+
+function search_aud(){
+    cd /home/$USER/aud && ls | grep -i $1;
+}
+
+function search_down(){
+    cd /home/$USER/Downloads && ls | grep -i $1 
+}
+
+function search_doc(){
+    cd /home/$USER/Documents && ls | grep -i $1 
+}

@@ -1,0 +1,54 @@
+# alias cda="cd ~/.config/awesome/"
+alias cdi="cd ~/.config/i3/"
+alias cdd="cd;cd"
+# alias via="vim ~/.config/awesome/rc.lua"
+alias vii="vim ~/.config/i3/config"
+# alias rmv="/etc/profile.d/rvm"
+# alias chromium="chromium-browser &"
+# alias chrome="google-chrome &"
+
+alias tmux="tmux -2u"
+alias muta="cd ~/attachments && mutt"
+
+# alias eclipse="~/eclipse/eclipse"
+alias idea="~/intellij/bin/idea.sh"
+alias pycharm="~/pycharm/bin/pycharm.sh"
+
+# export SPARK_HOME="~/spark"
+# export GOPATH=$HOME/code/golang
+# export NODE_GLOBAL_PATH=$HOME/npm-global/bin
+
+alias vii="vim ~/.config/i3/config"
+alias em='emacs'
+alias mplayer='mplayer -af scaletempo'
+# alias updt='sudo apt update && sudo apt list --upgradable'
+# alias upgrd='sudo apt upgrade -y'
+# alias install='sudo apt install $@ -y'
+# alias autoremove='sudo apt autoremove'
+
+# export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$GOPATH
+export PATH=$PATH:$GOPATH #:$SPARK_HOME/bin:$NODE_GLOBAL_PATH
+
+function search_aud(){
+    cd /home/$USER/aud && ls | grep -i $1;
+}
+
+function search_down(){
+    cd /home/$USER/Downloads && ls | grep -i $1
+}
+
+function search_doc(){
+    cd /home/$USER/Documents && ls | grep -i $1
+}
+
+function unmount(){
+    udisksctl power-off -b $1
+}
+
+# if [ "${DESKTOP_SESSION}" = 'deepin' ]; then
+#     $(.screenlayout/screen.sh);
+#     echo "Screen layout changed from 4k to 2k";
+# fi
+#
+export EDITOR='vim'
+# export VISUAL='program'
