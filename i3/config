@@ -30,7 +30,7 @@ font pango:DejaVu Sans Mono 8 # font editing using lxappearence, .gtkrc, .config
 floating_modifier Mod1
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec mate-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -220,8 +220,8 @@ exec compton -f
 
 # xrandr config => changing the mode to 1920x1080 resolution
 # exec xrandr --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1-1 --off
-exec_always xrandr --output HDMI1 --off --output VIRTUAL1 --off --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
-# exec ~/.screenlayout/screen.sh
+#exec_always xrandr --output HDMI1 --off --output VIRTUAL1 --off --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+exec ~/.screenlayout/xfce_screen.sh
 
 # enable tap-to-click 
 exec xinput set-prop "ELAN1010:00 04F3:3012 Touchpad" "libinput Tapping Enabled" 1
@@ -234,3 +234,6 @@ exec xinput set-prop "ELAN1010:00 04F3:3012 Touchpad" "libinput Tapping Enabled"
 # tray_output display set to primary
 exec --no-startup-id nm-applet				# Network Manager
 exec --no-startup-id /usr/bin/blueman-applet		# Bluetooth Manager
+
+# tilda
+exec_always tilda
