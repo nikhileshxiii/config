@@ -21,6 +21,9 @@ alias pycharm="~/pycharm/bin/pycharm.sh"
 alias vii="vim ~/.config/i3/config"
 alias em='emacs'
 alias mplayer='mplayer -af scaletempo'
+alias mpv-side='mpv --cache=2048 --ontop --no-border --force-window --autofit=500x280 --geometry=-15-60'
+
+
 # alias updt='sudo apt update && sudo apt list --upgradable'
 # alias upgrd='sudo apt upgrade -y'
 # alias install='sudo apt install $@ -y'
