@@ -48,6 +48,22 @@ function unmount(){
     udisksctl power-off -b $1
 }
 
+# Podqueue by gotbletu
+podqueue() {
+  if [ $# -lt 1 ]; then
+    echo -e "Add Links To Podboat, Use Podboat As A TUI Download Manager"
+    echo -e "\nUsage: $0 <url>"
+    echo -e "\nExample:\n$0 http://abcxyz.com/filename.mp3"
+    return 1
+  fi
+
+  URL="$1"
+  SAVE_PATH=~/Podcasts
+  GET_FILENAME="$(echo "$1" | rev | cut -d\/ -f1 | rev | sed -e 's@\%20@\_@g' )"
+
+  echo "$URL" "$SAVE_PATH/$GET_FILENAME" >> ~/.newsboat/queue
+}
+
 # if [ "${DESKTOP_SESSION}" = 'deepin' ]; then
 #     $(.screenlayout/screen.sh);
 #     echo "Screen layout changed from 4k to 2k";
