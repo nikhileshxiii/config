@@ -758,3 +758,5 @@ set expandtab
 "u commandmode here
 "
 
+" my edits
+Plug 'dracula/vim', { 'as': 'dracula' }

@@ -10,7 +10,7 @@ alias vii="vim ~/.config/i3/config"
 alias tmux="tmux -2u"
 alias muta="cd ~/attachments && mutt"
 
-# alias eclipse="~/eclipse/eclipse"
+alias eclipse="~/eclipse/eclipse"
 alias idea="~/intellij/bin/idea.sh"
 alias pycharm="~/pycharm/bin/pycharm.sh"
 
@@ -23,6 +23,8 @@ alias em='emacs'
 alias mplayer='mplayer -af scaletempo'
 alias mpv-side='mpv --cache=2048 --ontop --no-border --force-window --autofit=500x280 --geometry=-15-60'
 
+alias install='sudo apt install'
+alias updt='sudo apt update && sudo apt upgrade -y'
 
 # alias updt='sudo apt update && sudo apt list --upgradable'
 # alias upgrd='sudo apt upgrade -y'
@@ -31,6 +33,9 @@ alias mpv-side='mpv --cache=2048 --ontop --no-border --force-window --autofit=50
 
 # export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$GOPATH
 export PATH=$PATH:$GOPATH #:$SPARK_HOME/bin:$NODE_GLOBAL_PATH
+
+export PATH=/usr/local/cuda-9.0/bin${PATH:+${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}:+${LD_LIBRARY_PATH}
 
 function search_aud(){
     cd /home/$USER/aud && ls | grep -i $1;
@@ -82,3 +87,23 @@ function dockerip(){
 		done
 	fi
 }
+
+
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$(CONDA_REPORT_ERRORS=false '/home/nik/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     \eval "$__conda_setup"
+# else
+#     if [ -f "/home/nik/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/nik/anaconda3/etc/profile.d/conda.sh"
+#         CONDA_CHANGEPS1=false conda activate base
+#     else
+#         \export PATH="/home/nik/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda init <<<
+
+# added by Anaconda3 4.2.0 installer
+export PATH="/home/nik/anaconda3/bin:$PATH"

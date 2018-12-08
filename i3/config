@@ -236,7 +236,8 @@ exec compton -f
 # xrandr config => changing the mode to 1920x1080 resolution
 # exec xrandr --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1-1 --off
 #exec_always xrandr --output HDMI1 --off --output VIRTUAL1 --off --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
-exec ~/.screenlayout/xfce_screen.sh
+# exec ~/.screenlayout/xfce_screen.sh
+exec xrandr --output HDMI1 --off --output VIRTUAL1 --off --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
 # enable tap-to-click 
 exec xinput set-prop "ELAN1010:00 04F3:3012 Touchpad" "libinput Tapping Enabled" 1
