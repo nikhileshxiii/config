@@ -760,3 +760,4 @@ set expandtab
 
 " my edits
 Plug 'dracula/vim', { 'as': 'dracula' }
+set clipboard=unnamedplus
