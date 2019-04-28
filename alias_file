@@ -53,6 +53,19 @@ function unmount(){
     udisksctl power-off -b $1
 }
 
+function uao(){
+    cur_dir=$(pwd)
+    echo "Current Working directory is ==> ${cur_dir}"
+    # Shell extensions
+    # ~% FILE="example.tar.gz"
+    # echo "${FILE%%.*}" => example
+    # echo "${FILE%.*}"  => example.tar
+    # echo "${FILE#*.}"  => tar.gz
+    # echo "${FILE##*.}" =>gz
+    name="${1%%.*}"
+    dtrx $1 && cd ${name} && idea pom.xml
+}
+
 # Podqueue by gotbletu
 podqueue() {
   if [ $# -lt 1 ]; then
@@ -106,4 +119,5 @@ function dockerip(){
 # <<< conda init <<<
 
 # added by Anaconda3 4.2.0 installer
-export PATH="/home/nik/anaconda3/bin:$PATH"
+# export PATH="/home/nik/anaconda3/bin:$PATH"
+export PATH="$PATH:/home/nik/anaconda3/bin"
