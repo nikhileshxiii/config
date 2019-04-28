@@ -209,7 +209,8 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ unmute # increase sound 
 bindsym XF86AudioLowerVolume  exec amixer -q sset Master 5%- unmute # decrease sound
-bindsym XF86AudioMute exec amixer -q sset Master toggle && amixer -q sset Headphone toggle # toggle Master doesn't work with the device -> Headphones to be toggled along with master
+bindsym XF86AudioMute exec amixer -D pulse set Master toggle # && amixer -q sset Headphone toggle # toggle Master doesn't work with the device -> Headphones to be toggled along with master
+# bindsym XF86AudioMute exec amixer -q sset Master toggle && amixer -q sset Headphone toggle # toggle Master doesn't work with the device -> Headphones to be toggled along with master
 
 # # Media player controls
 # bindsym XF86AudioPlay exec playerctl play
@@ -240,7 +241,7 @@ exec compton -f
 exec xrandr --output HDMI1 --off --output VIRTUAL1 --off --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
 # enable tap-to-click 
-exec xinput set-prop "ELAN1010:00 04F3:3012 Touchpad" "libinput Tapping Enabled" 1
+exec xinput set-prop "ELAN1010:00 04F3:3012 Touchpad" "libinput Tapping Enabled" 0
 
 # i3-gaps stuff :)
 # gaps inner 5
